@@ -8,7 +8,6 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://leaderboard-system-4ye9.onrender.com",
       "https://leader-board-system-nine.vercel.app/"
     ], 
     credentials: true,
