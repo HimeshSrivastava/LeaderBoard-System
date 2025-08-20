@@ -13,6 +13,22 @@ app.use(
     credentials: true,
   })
 );
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (
+        !origin ||                                   
+        allowedOrigins.includes(origin) ||           
+        /\.vercel\.app$/.test(origin)                
+      ) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
 
 import userRoutes from './routes/user.routes.js'
 import historyRoutes from './routes/history.routes.js'
