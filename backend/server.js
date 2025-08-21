@@ -1,7 +1,6 @@
 import express from 'express'
 import ConnectMongoose from './db/ConnectionMongoose.js';
 import cors from "cors";
-import express from "express";
 
 const app = express();
 
